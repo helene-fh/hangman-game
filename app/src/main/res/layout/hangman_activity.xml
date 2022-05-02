@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradiet_background">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/main_actionbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hangman"
+        android:textColor="#E1F15E30"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/include"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.421" />
+
+    <Button
+        android:id="@+id/m_about"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_baseline_info_24"
+        app:layout_constraintBottom_toBottomOf="@+id/include"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/b_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.069"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/b_guess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="92dp"
+        android:background="@color/black"
+        android:text="Gissa!"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.739"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_0"
+        app:layout_constraintVertical_bias="0.391" />
+
+    <Button
+        android:id="@+id/new_game"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="56dp"
+        android:background="@drawable/ic_baseline_play_arrow_24"
+        app:layout_constraintBottom_toTopOf="@+id/b_guess"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/user_input"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Skriv in en bokstav"
+        android:textColorHint="#BCE8E5E5"
+        android:backgroundTint="#E54913"
+        android:inputType="textPersonName"
+        android:maxLength="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <ImageView
+        android:id="@+id/game_0"
+        android:layout_width="244dp"
+        android:layout_height="135dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:layout_constraintVertical_bias="0.014"
+        app:srcCompat="@drawable/game0" />
+
+    <TextView
+        android:id="@+id/used_letter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="Använda bokstäver:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/user_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_0"
+        app:layout_constraintVertical_bias="0.609" />
+
+    <TextView
+        android:id="@+id/the_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:letterSpacing="0.3"
+        android:text=""
+        android:textSize="26sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/used_letter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_0"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Misslyckade försök: "
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/used_letters"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <TextView
+        android:id="@+id/tries_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/user_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/used_letters"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/used_letters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/user_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_0"
+        app:layout_constraintVertical_bias="0.601" />
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Psst... Ett djur..."
+        android:textColor="#74F4F3F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tries_left"
+        app:layout_constraintVertical_bias="0.133" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
